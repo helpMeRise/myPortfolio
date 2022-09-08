@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preload" href="fonts/Gilroy-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Gilroy-Medium.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/Gilroy-Light.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Gilroy-Light.woff" as="font" type="font/woff" crossorigin>
+
+  <meta property="og:image" content="img/hero/photo.jpg">
+
+<!--  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">-->
+ <link rel="icon" type="image/png" href="img/favicon.png">
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const createLink = (url) => {
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = url;
+        document.head.append(link);
+      }
+      createLink('css/index.min.css');
+    })
+  </script>
+
+  <script defer src="js/index.min.js"></script>
+
+  <title>Maksym Melnyk</title>
+</head>
+<body>
+  <section class="section hero">
+    <div class="container">
+      <div class="hero__container">
+        <div class="hero__info">
+          <ul class="socials">
+            <li class="socails__item">
+              <a href="#" class="socials__link">
+                <img src="./img/socails/viber.svg" alt="" class="socials__icon">
+              </a>
+            </li>
+
+            <li class="socails__item">
+              <a href="#" class="socials__link">
+                <img src="./img/socails/instagram.svg" alt="" class="socials__icon">
+              </a>
+            </li>
+
+            <li class="socails__item">
+              <a href="#" class="socials__link">
+                <img src="./img/socails/telegram.svg" alt="" class="socials__icon">
+              </a>
+            </li>
+          </ul>
+
+          <h1 class="hero__title">Максим Мельник, веб-разработчик</h1>
+          <p class="hero__text">Верстаю сайты и веб-приложения для бизнеса, которые правильно отображается на компьютерах и телефонах и не тормозят</p>
+          <button class="button hero__button">Смотреть работы</button>
+
+        </div>
+        <div class="hero__photo">
+          <img src="./img/photo.jpg" alt="Фотография Мельника Максима">
+        </div>
+      </div>
+      <div class="hero__arrow">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
