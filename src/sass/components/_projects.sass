@@ -1,0 +1,117 @@
+.projects
+  background-color: $add-color
+  &__list
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    gap: 35px
+  &__item
+    position: relative
+    flex-basis: 580px
+    height: 290px
+    color: $color-light
+    overflow: hidden
+    &_indo
+      background: url('../img/projects/indonesia.jpg') top 0 left 50% no-repeat
+    &_copywriter
+      background: url('../img/projects/sokolovskaya-portfolio.jpg') top 0 left 50% no-repeat
+    &_friendly
+      background: url('../img/projects/friendly-house.jpg') top 0 left 50% no-repeat
+    &_renovation
+      background: url('../img/projects/renovation.jpg') top 0 left 50% no-repeat
+    &_game
+      background: url('../img/projects/game-over.jpg') top 0 left 50% no-repeat
+    &_chair
+      background: url('../img/projects/chairs.jpg') top 0 left 50% no-repeat
+    &-hover
+      position: absolute
+      content: ''
+      width: 100%
+      height: 100%
+      top: 0
+      right: 0
+      padding: 40px
+      display: flex
+      flex-direction: column
+      justify-content: flex-end
+      align-items: start
+      background-color: rgba($color, 0.8)
+      transform: translateY(100%)
+      transition: 0.5s
+    &-text
+      font-weight: 500
+      font-size: 18px
+      line-height: 22px
+      max-width: 305px
+      margin-bottom: 20px
+    &-button 
+      position: relative
+      color: inherit
+      padding: 10px 15px
+      &::after
+        position: absolute
+        content: ''
+        top: 0
+        left: 0
+        height: 1px
+        width: 0
+        background-color: $color-light
+        transition: 0.3s
+      &::before
+        position: absolute
+        content: ''
+        top: 0
+        right: 0
+        height: 0
+        width: 1px
+        background-color: $color-light
+        transition: 0.3s
+      &:hover
+        &::after
+          width: 100%
+        &::before
+          height: 100%
+        .projects__item-span:first-of-type
+          width: 100%
+        .projects__item-span:last-of-type
+          height: 100%
+    &-span:first-of-type
+      position: absolute
+      display: block
+      bottom: 0
+      right: 0
+      height: 1px
+      width: 0
+      background-color: $color-light
+      transition: 0.3s
+    &-span:last-of-type
+      position: absolute
+      display: block
+      bottom: 0
+      left: 0
+      height: 0
+      width: 1px
+      background-color: $color-light
+      transition: 0.3s
+        
+  @media screen and ( max-width: 1450px )
+    &__list
+      justify-content: center
+      gap: 50px
+  @media screen and ( max-width: 767px  )
+    &__item
+      max-width: 90%
+      height: 200px
+      background-size: cover
+      &-hover
+        padding: 15px
+      &-text
+        font-size: 16px
+        line-height: 18px
+        max-width: 250px
+
+  @media screen and ( min-width: 1023px )
+    &__item
+      &:hover
+        .projects__item-hover
+          transform: translateY(0)

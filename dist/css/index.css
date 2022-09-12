@@ -483,7 +483,7 @@ p {
 }
 
 .section {
-  padding: 30px 0;
+  padding: 60px 0;
 }
 
 .section__title {
@@ -583,9 +583,189 @@ p {
   background-color: #F2F2F2;
 }
 
+.projects {
+  background-color: #F2F2F2;
+}
+
+.projects__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 35px;
+}
+
+.projects__item {
+  position: relative;
+  -ms-flex-preferred-size: 580px;
+  flex-basis: 580px;
+  height: 290px;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.projects__item_indo {
+  background: url("../img/projects/indonesia.jpg") top 0 left 50% no-repeat;
+}
+
+.projects__item_copywriter {
+  background: url("../img/projects/sokolovskaya-portfolio.jpg") top 0 left 50% no-repeat;
+}
+
+.projects__item_friendly {
+  background: url("../img/projects/friendly-house.jpg") top 0 left 50% no-repeat;
+}
+
+.projects__item_renovation {
+  background: url("../img/projects/renovation.jpg") top 0 left 50% no-repeat;
+}
+
+.projects__item_game {
+  background: url("../img/projects/game-over.jpg") top 0 left 50% no-repeat;
+}
+
+.projects__item_chair {
+  background: url("../img/projects/chairs.jpg") top 0 left 50% no-repeat;
+}
+
+.projects__item-hover {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  padding: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.projects__item-text {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  max-width: 305px;
+  margin-bottom: 20px;
+}
+
+.projects__item-button {
+  position: relative;
+  color: inherit;
+  padding: 10px 15px;
+}
+
+.projects__item-button::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 1px;
+  width: 0;
+  background-color: #ffffff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.projects__item-button::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  height: 0;
+  width: 1px;
+  background-color: #ffffff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.projects__item-button:hover::after {
+  width: 100%;
+}
+
+.projects__item-button:hover::before {
+  height: 100%;
+}
+
+.projects__item-button:hover .projects__item-span:first-of-type {
+  width: 100%;
+}
+
+.projects__item-button:hover .projects__item-span:last-of-type {
+  height: 100%;
+}
+
+.projects__item-span:first-of-type {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  right: 0;
+  height: 1px;
+  width: 0;
+  background-color: #ffffff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.projects__item-span:last-of-type {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 0;
+  height: 0;
+  width: 1px;
+  background-color: #ffffff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.footer__title {
+  margin-bottom: 15px;
+}
+
+.footer__text {
+  max-width: 375px;
+  margin-bottom: 25px;
+}
+
 @media (min-width: 1000px) {
   a:hover:after {
     width: 100%;
+  }
+}
+
+@media screen and (min-width: 1023px) {
+  .projects__item:hover .projects__item-hover {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 1450px) {
+  .projects__list {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: 50px;
   }
 }
 
@@ -673,6 +853,7 @@ p {
   }
 
   .section__title {
+    padding: 30px 0;
     font-size: 17px;
     line-height: 21px;
     margin-bottom: 15px;
@@ -711,5 +892,25 @@ p {
     padding: 5px 10px;
     font-size: 14px;
     line-height: 18px;
+  }
+
+  .projects__item {
+    max-width: 90%;
+    height: 200px;
+    background-size: cover;
+  }
+
+  .projects__item-hover {
+    padding: 15px;
+  }
+
+  .projects__item-text {
+    font-size: 16px;
+    line-height: 18px;
+    max-width: 250px;
+  }
+
+  .footer__title {
+    padding: 0;
   }
 }
